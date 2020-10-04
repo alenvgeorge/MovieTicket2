@@ -6,8 +6,7 @@
 #define PROJECT_NAME    "Movie"
 
 /* Prototypes for all the test functions */
-void test_adminlogin(void);
-
+void test_admin(void);
 
 /* Start of the application test */
 int main() {
@@ -20,7 +19,9 @@ int main() {
 
 
   /* Add your test functions in this format for testing*/
-  int admin_login(char *admin_username, char *admin_password);
+  CU_add_test(suite,"admin",test_admin);
+
+
 
 /* Note: Do not edit START*/
   /* Setup Test Framework to output the result to Screen */
@@ -36,12 +37,13 @@ int main() {
 }
 
 /* Write all the test functions */
-void test_adminlogin(void) {
-  CU_ASSERT(1 == admin_login("admin","admin24"));
 
-  /* Dummy fail*/
-  CU_ASSERT(0 == admin_login("admin","admin23"));
+void test_admin(void)
+{
+    CU_ASSERT(1==admin_login("admin","admin24"));
+
 }
+
 
 
 
