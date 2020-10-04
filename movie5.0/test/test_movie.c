@@ -3,7 +3,7 @@
 
 /* Modify these two lines according to the project */
 #include <movie.h>
-#define PROJECT_NAME    "Movie"
+#define PROJECT_NAME "Movie"
 
 /* Prototypes for all the test functions */
 void test_admin(void);
@@ -40,10 +40,6 @@ int main() {
 
 void test_admin(void)
 {
-    CU_ASSERT(1==admin_login("admin","admin24"));
+  CU_ASSERT(1==admin_login("admin","admin24"));
 
 }
-
-
-
-
